@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>CSM_Form_Cpl</title>
+    <meta charset="Unicode">
+
+    <style>
+
+        label {
+            color: gray ;
+        }
+        .col_izq {
+            color: red ;
+        }
+        input[type="button"], input[type="reset"] {
+            color: blue ;
+            border-color: red ;
+            background-color: pink ;
+        }
+        input[type="submit"] {
+            color: green ;
+            font-size: 30px ;
+            border-color: black ;
+        }
+
+    </style>
+
+</head>
+<body>  
+
+    <form method="POST" action="http://formadorestic.com/alumnosasir2/procesaformulario_usuario.php">
+        <table border="3" align="center">
+            <tr>
+                <td colspan="2"><h1 align="center">FORMULARIO</h1></td>
+            </tr>
+            <tr>
+                <td align="center"><label for="name" class="col_izq">Nombre*</label></td>
+                <td><input type="text" id="name" name="nombre" placeholder="Ej: Stuka" required autofocus></td>
+            </tr>
+            <tr>
+                <td align="center"><label for="pass" class="col_izq">Contraseña*</label></td>
+                <td><input type="password" id="pass" name="password" placeholder="Ej: clave$1" required></td>
+            </tr>
+            <tr>
+                <td align="center"><label for="addr" class="col_izq">Dirección</label></td>
+                <td><textarea rows="5" cols="30"id="addr" name="direccion" placeholder="Ej: C/ manolo, Nº5, 6ºG"></textarea></td>
+            </tr>
+            <tr>
+                <td align="center" class="col_izq"><p>Selecciona Deporte</p></td>
+                <td align="left">
+                    <input type="checkbox" id="Futbol" name="deportes[]" value="Futbol">
+                    <label for="Futbol">Futbol</label>
+                    <br>
+                    <input type="checkbox" id="Baloncesto" name="deportes[]" value="Baloncesto">
+                    <label for="Baloncesto">Baloncesto</label>
+                    <br>
+                    <input type="checkbox" id="Natacion" name="deportes[]" value="Natación">
+                    <label for="Natacion">Natación</label>
+                    <br>
+                    <input type="checkbox" id="Tenis" name="deportes[]" value="Tenis">
+                    <label for="Tenis">Tenis</label>
+                    <br>
+                    <input type="checkbox" id="Ciclismo" name="deportes[]" value="Ciclismo">
+                    <label for="Ciclismo">Ciclismo</label>
+                    <br>
+                </td>
+            </tr>
+            <tr>
+                <td align="center" class="col_izq"><p>Género</p></td>
+                <td>
+                    <input type="radio" id="Hombr" name="sexo" value="Hombre" checked>
+                    <label for="Hombr">Hombre</label>
+                    <br>
+                    <input type="radio" id="Muj" name="sexo" value="Mujer">
+                    <label for="Muj">Mujer</label>
+                    <br>
+                </td>
+            </tr>
+            <tr>
+                <td align="center"><label for="age" class="col_izq">Seleccione Edad</label></td>
+                <td align="center">
+                    <select id="age" name="edad">
+                        <option value="No seleccionado" selected disabled>Seleccione Edad</option>
+                        <option value="Menor de Edad">Menor de Edad</option>
+                        <option value="Entre 18 y 30">Entre 18 y 30 Años</option>
+                        <option value="Entre 31 y 80">Entre 31 y 80 Años</option>
+                        <option value="Mas de 81 años">Más de 81 Años</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td align="center" colspan="2">
+                    <input type="file" id="File">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="button" id="Button" value="Dame Click">
+                    <input type="reset" id="Reset" value="Reiniciar Valores">
+                    <input type="submit" id="Submit" value="Enviar">
+                </td>
+            </tr>
+
+        </table>
+    </form>
+<p align="center">* = Campos obligatorios</p>
+
+</body>
+</html>
